@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript Add Paragraph</title>
 </head>
 <body>
-    <h1>Hello World</h1>    
+    <button onclick="addParagraph()">Add Paragraph</button>
+    <div id="content"></div>
+
+    <script>
+        function addParagraph() {
+            let newParagraph = document.createElement("p"); // Create a new <p> element
+            newParagraph.textContent = "This is a new paragraph."; // Set its content
+            document.getElementById("content").appendChild(newParagraph); // Append it to the div
+        }
+    </script>
 </body>
 </html>
